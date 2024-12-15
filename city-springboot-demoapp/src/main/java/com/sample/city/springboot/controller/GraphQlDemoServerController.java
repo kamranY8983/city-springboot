@@ -13,4 +13,9 @@ public class GraphQlDemoServerController {
     public Integer getSquare(Integer input) {
         return input * input;
     }
+
+    @GraphQLQuery(name = "throwingNPE")
+    public Integer throwingNPE(Integer input) {
+        throw new NullPointerException();
+    }
 }

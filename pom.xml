@@ -17,6 +17,7 @@
     <modules>
         <module>city-springboot-graphql-server</module>
         <module>city-springboot-common</module>
+        <module>city-springboot-demoapp</module>
     </modules>
 
     <properties>

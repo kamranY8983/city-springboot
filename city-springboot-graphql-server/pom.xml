@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jedi-springboot-graphql-server</artifactId>
+    <artifactId>city-springboot-graphql-server</artifactId>
     <description>SpringBoot artifacts for GraphQL Server implementation</description>
 
 

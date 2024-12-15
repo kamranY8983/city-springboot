@@ -117,11 +117,7 @@ public class GraphQlSchemaFactory implements FactoryBean<GraphQLSchema> {
                 }
                 ResolvableType resolvableType = originatingBeanDefinition.getResolvableType();
                 if (resolvableType != ResolvableType.NONE
-                        && Utils.isNotEmpty(originatingBeanDefinition.getBeanClassName())
-                        // Sanity check only -- should never happen
-                        && !originatingBeanDefinition
-                                .getBeanClassName()
-                                .startsWith("org.springframework.")) {
+                        && Utils.isNotEmpty(originatingBeanDefinition.getBeanClassName())) {
                     beanType = GenericTypeReflector.annotate(resolvableType.getType());
                 } else {
                     beanType =

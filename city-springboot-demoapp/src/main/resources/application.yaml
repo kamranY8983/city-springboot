@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+spring:
+  graphql:
+    graphiql:
+      enabled: true
+      path: /gui
+
+graphql:
+  server:
+    enabled: true

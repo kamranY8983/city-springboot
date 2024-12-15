@@ -2,9 +2,11 @@ package com.sample.city.springboot.configuration;
 
 import com.sample.city.springboot.component.GraphiQlMvcHandler;
 
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.graphql.GraphQlProperties;
+import org.springframework.boot.autoconfigure.graphql.servlet.GraphQlWebMvcAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -19,6 +21,7 @@ import org.springframework.http.MediaType;
 import java.util.Collections;
 
 /** Configuration with beans used to produce GraphQl server */
+@AutoConfiguration(after = GraphQlWebMvcAutoConfiguration.class)
 @EnableAutoConfiguration
 @Configuration
 public class GraphQlMvcServerConfiguration {

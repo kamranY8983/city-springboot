@@ -6,7 +6,21 @@ spring:
     graphiql:
       enabled: true
       path: /gui
+    # if you don't add this property you will get error in graphiql for subscription
+    websocket:
+      path: /graphql
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/demo_db
 
 graphql:
   server:
     enabled: true
+
+logging:
+  level:
+    root: DEBUG
+    reactor: DEBUG
+    org.springframework.web.reactive: DEBUG
+

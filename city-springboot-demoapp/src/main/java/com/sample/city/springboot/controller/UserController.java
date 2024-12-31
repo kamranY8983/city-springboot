@@ -34,6 +34,12 @@ public class UserController {
         return userService.saveUser(user);
     }
 
+    @GraphQLQuery(name = "saveUserT")
+    public Mono<User> saveUserT(User user) {
+        log.debug("saveUserT() request received with user '{}'", user);
+        return Mono.just(userService.saveUser(user)).map(u -> u);
+    }
+
     @GraphQLQuery(name = "saveUserR")
     public Mono<User> saveUserReactive(User user) {
         log.debug("saveUserR() request received with user '{}'", user);
